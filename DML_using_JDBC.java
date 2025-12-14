@@ -8,7 +8,9 @@ public class DML_using_JDBC {
         Connection con=DriverManager.getConnection("jdbc:sqlite:C:\\Sqlite\\univ.db");
         Statement stm=con.createStatement();
        // stm.executeUpdate("insert into dept values(60,'CHEMICAL ENGINEERING')");
-       stm.executeUpdate("insert into dept(dname,deptno) values('EEE',80)");
+       //stm.executeUpdate("insert into dept(dname,deptno) values('EEE',80)");
+      // stm.executeUpdate("delete from dept where deptno>50");
+      stm.executeUpdate("update dept set dname='CHEMICAL ENGINEERING' where dname='Chem'");
         stm.close();
         con.close();
     }
