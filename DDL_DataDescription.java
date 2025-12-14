@@ -7,6 +7,7 @@ public class DDL_DataDescription {
         Connection con=DriverManager.getConnection("jdbc:sqlite:C:\\Sqlite\\univ.db");
         Statement stm=con.createStatement();
         stm.executeUpdate("create table temp2(a integer,b float)");
+        //stm.executeUpdate("drop table temp2");
         stm.close();
         con.close(); 
 
